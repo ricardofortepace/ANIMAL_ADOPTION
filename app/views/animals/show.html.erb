@@ -1,0 +1,44 @@
+<p>
+  <strong>Specie:</strong>
+  <%= @animal.specie %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @animal.genre %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @animal.age %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @animal.breed %>
+</p>
+
+<p>
+  <strong>Castrate:</strong>
+  <%= @animal.castrate %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @animal.description %>
+</p>
+
+<%# <h3>Reviews:</h3>
+<ul>
+  <% @animal.reviews.each do |review| %>
+    <%# <li>
+      <%= review.description %>
+      <%# <%= link_to "Remove", review_path(review), method: 'DELETE', data: { confirm: 'Are you sure?' } %>
+    <%# </li> %>
+  <%# <% end %>
+<%# </ul> %>
+
+
+
+<%= link_to 'Edit', edit_animal_path(@animal) %> |
+<%= link_to 'Back', animals_path %>
