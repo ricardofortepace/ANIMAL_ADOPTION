@@ -2,7 +2,7 @@ class AnimalsController < ApplicationController
   before_action :set_animal, only: %i[show edit update destroy]
   # GET /animals
   def index
-    @animals = Animal.all
+    @pagy, @animals = pagy(@animals = Animal.all)
   end
 
   # GET /animals/1
