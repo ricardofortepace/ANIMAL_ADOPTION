@@ -1,0 +1,43 @@
+.footer {
+  background-color: #ff5454;
+  padding: 0.55vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.social {
+  position: absolute;
+  left: 2vw;
+  bottom: 0.3vh;
+}
+
+.social-icon img {
+  height: 2vh;
+  margin: auto 0.35vw;
+}
+
+.social-icon img:hover {
+  height: 2vh;
+  margin: auto 0.35vw;
+}
+
+.pilares {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.content {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Readex Pro", sans-serif;
+  font-weight: 200;
+  margin: auto 5vw;
+}

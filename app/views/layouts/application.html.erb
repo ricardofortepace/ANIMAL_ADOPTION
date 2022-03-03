@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ANIMALAdoption</title>
+    <title>The Caramel Doggo</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Adopt. Don't shop.">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
@@ -19,5 +21,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= render 'shared/flashes' %>
+    <%= render 'shared/footer' %>
+    <script src="https://kit.fontawesome.com/812ec74016.js" crossorigin="anonymous"></script>
   </body>
 </html>
