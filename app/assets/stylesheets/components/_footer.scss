@@ -1,7 +1,7 @@
 .footer {
+  position: fixed;
   background-color: #ff5454;
   padding: 0.55vh;
-  position: absolute;
   bottom: 0;
   width: 100%;
 }
@@ -30,7 +30,7 @@
 
 .pilares {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 30%;
 }
 
