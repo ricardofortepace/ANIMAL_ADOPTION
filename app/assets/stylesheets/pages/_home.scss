@@ -1,1 +1,36 @@
 // Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;800&display=swap');
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  // padding: 200px 0;
+  height: 81vh;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 100px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 180px;
+  opacity: 0.85;
+  color: #FFFFFF;
+}
+
+.text-home {
+  height: 81vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
