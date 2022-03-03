@@ -1,12 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;400;700&display=swap");
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #ff5454;
+  height: 15vh;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-light .navbar-brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 5.8vh;
+  align-items: center;
+  font-family: "Readex Pro", sans-serif;
+  padding: 2%;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: #fff;
+  font-size: 5.6vh;
+  transition: 0.1s;
+}
+
+.avatar {
+  width: 10vh;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  margin: -20%;
+}
+
+.avatar:hover {
+  transition: 4s;
+  transform: scale(1.1);
+}
+
+.nav-link {
+  margin: auto 2vw auto 0.5vw;
+  font-weight: 200;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  font-family: "Readex Pro", sans-serif;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #8054ff;
+}
+
+.dropdown-menu {
+  background-color: #8054ff;
+}
+
+.dropdown-item {
+  color: #fff;
+  font-family: "Readex Pro", sans-serif;
+  font-weight: 200;
+}
+
+.dropdown-item:hover {
+  background-color: #ff5454;
+  color: #fff;
+  border: none;
+  font-weight: 400;
 }
