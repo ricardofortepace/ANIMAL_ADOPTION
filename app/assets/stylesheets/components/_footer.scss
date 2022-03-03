@@ -21,6 +21,7 @@
 .social-icon img {
   height: 2vh;
   margin: auto 0.35vw;
+  text-decoration: none;
 }
 
 .social-icon img:hover {
@@ -34,10 +35,15 @@
   width: 30%;
 }
 
-.content {
+#content {
   text-decoration: none;
   color: #fff;
   font-family: "Readex Pro", sans-serif;
   font-weight: 200;
   margin: auto 5vw;
+}
+
+#content:hover {
+  color: #8054ff;
+  font-weight: 400;
 }
