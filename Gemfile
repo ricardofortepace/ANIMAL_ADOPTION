@@ -25,6 +25,8 @@ gem 'pagy', '~> 5.10' # omit patch digit
 
 gem 'devise'
 gem 'faker'
+
+gem 'cloudinary', '~> 1.16.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
