@@ -2,7 +2,7 @@
   <div class="cards my-5">
     <% @animals.each do |animal| %>
       <%= link_to animal do %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= animal.photos.attached? ? cl_image_path(animal.photos.first.key) : 'https://img.lovepik.com/free_png/32/23/59/70358PIC95iAmhU4dc0VY_PIC2018.png_860.png' %>)">
           genre: <%= animal.genre %> | age: <%= animal.age%>
         </div>
       <% end %>
