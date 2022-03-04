@@ -13,7 +13,12 @@
           <p class="hello-user">Hello <%=current_user.name%>,</p>
           <li class="nav-item dropdown">
 
-              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% if current_user.photo.attached?%>
+                <%= cl_image_tag current_user.photo.key, :width=>100, :height=>100, :gravity=>"faces", :crop=>"thumb", class: "avatar dropdown-toggle", id: "navbarDropdown",  data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false%>
+              <% else %>
+                <%= image_tag "https://www.leaguegaming.com/tpl/homepage/img/lg/empty_profile.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%end%>
+
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "adopt a new pet", animals_path, class: "dropdown-item" %>
                 <%= link_to "add a pet for adoption", new_animal_path, class: "dropdown-item" %>
@@ -34,4 +39,3 @@
     </div>
   </div>
 </div>
-
