@@ -20,7 +20,7 @@
 }
 
 .social-icon i {
-  height: 2vh;
+  font-size: 100%;
   margin: auto 0.35vw;
   text-decoration: none;
   color: #fff;
@@ -36,18 +36,18 @@
   justify-content: center;
   width: 30%;
   letter-spacing: 0.2rem;
+  font-size: 100%;
 }
 
 #content {
   text-decoration: none;
   color: #fff;
   font-family: "Readex Pro", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   margin: auto 5vw;
 }
 
 #content:hover {
   color: #8054ff;
-  font-weight: bold;
   transition: 0.5s;
 }
