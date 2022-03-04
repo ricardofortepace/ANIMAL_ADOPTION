@@ -1,10 +1,10 @@
 .footer {
   position: fixed;
-  background: linear-gradient(to right, #ee7070, #ff5454);
+  background: linear-gradient(to left, #f88c8c, #ff5454);
   padding: 0.55vh;
   bottom: 0;
   width: 100%;
-  box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .footer-container {
@@ -28,7 +28,7 @@
 
 .social-icon i:hover {
   color: #8054ff;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .pilares {
@@ -49,5 +49,5 @@
 #content:hover {
   color: #8054ff;
   font-weight: bold;
-  transition: 1s;
+  transition: 0.5s;
 }
