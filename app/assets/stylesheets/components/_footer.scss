@@ -1,9 +1,10 @@
 .footer {
   position: fixed;
-  background-color: #ff5454;
+  background: linear-gradient(to right, #ee7070, #ff5454);
   padding: 0.55vh;
   bottom: 0;
   width: 100%;
+  box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.35);
 }
 
 .footer-container {
@@ -18,21 +19,23 @@
   bottom: 0.3vh;
 }
 
-.social-icon img {
+.social-icon i {
   height: 2vh;
   margin: auto 0.35vw;
   text-decoration: none;
+  color: #fff;
 }
 
-.social-icon img:hover {
-  height: 2vh;
-  margin: auto 0.35vw;
+.social-icon i:hover {
+  color: #8054ff;
+  transition: 1s;
 }
 
 .pilares {
   display: flex;
   justify-content: center;
   width: 30%;
+  letter-spacing: 0.2rem;
 }
 
 #content {
@@ -45,5 +48,6 @@
 
 #content:hover {
   color: #8054ff;
-  font-weight: 400;
+  font-weight: bold;
+  transition: 1s;
 }
