@@ -20,8 +20,8 @@
 
 .card-cont {
   position: absolute;
-  left: 43vw;
-  top: 7vh;
+  left: 37vw;
+  top: 8vh;
 }
 
 .botoes {
@@ -91,4 +91,23 @@
   background-color: #ff5454;
   color: #fff;
   border: 3px solid #ff5454;
+}
+
+.titulo {
+  font-weight: 400;
+  font-size: 14px;
+  color: #ff5454;
+  font-size: 22px;
+  margin: 5px;
+}
+
+.titulo:hover {
+  color: #8054ff;
+}
+
+.info {
+  color: #868686;
+  font-weight: 200;
+  font-size: 18px;
+  margin: 10px;
 }

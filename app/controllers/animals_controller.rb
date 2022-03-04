@@ -7,6 +7,7 @@ class AnimalsController < ApplicationController
 
   # GET /animals/1
   def show
+    @adoption = Adoption.new
   end
 
   # GET /animals/new
