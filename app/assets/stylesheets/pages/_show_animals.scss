@@ -43,6 +43,8 @@
   font-size: 14px;
   border: 3px solid #8054ff;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
+  position: absolute;
+  right: 380px;
 }
 
 .button-go-share:hover {
@@ -64,6 +66,8 @@
   font-size: 14px;
   border: 3px solid #ff5454;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
+  position: absolute;
+  right: 265px;
 }
 
 .button-go-back:hover {
@@ -85,6 +89,8 @@
   font-size: 14px;
   border: 3px solid #ff5454;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
+  position: absolute;
+  right: 1px;
 }
 
 .button-go-take:hover {
@@ -98,7 +104,7 @@
   font-size: 14px;
   color: #ff5454;
   font-size: 22px;
-  margin: 5px;
+  margin: 4px;
 }
 
 .titulo:hover {
@@ -109,5 +115,5 @@
   color: #868686;
   font-weight: 200;
   font-size: 18px;
-  margin: 10px;
+  margin: 7px;
 }

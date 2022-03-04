@@ -12,9 +12,13 @@ class AdoptionsController < ApplicationController
     @adoption.user = current_user
 
     if @adoption.save
-      redirect_to adoption_path(@animal)
+      redirect_to adoption_path(@adoption)
     else
       render 'new'
     end
+  end
+
+  def show
+    @adoption = Adoption.find(params[:id])
   end
 end
