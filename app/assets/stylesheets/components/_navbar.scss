@@ -2,8 +2,24 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: #ff5454;
-  height: 15vh;
+  background: linear-gradient(to left, #f88c8c, #ff5454);
+  height: 13vh;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hello-user {
+  margin: auto 2vw auto 2vw;
+  font-weight: 200;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 16px;
+}
+
+.hello-user:hover {
+  color: #8054ff;
+  transition: 0.25s;
+  cursor: pointer;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -16,53 +32,63 @@
   font-size: 5.8vh;
   align-items: center;
   font-family: "Readex Pro", sans-serif;
+  font-weight: bold;
   padding: 2%;
+  letter-spacing: 1.25rem;
 }
 
 .navbar-light .navbar-brand:hover {
-  color: #fff;
-  font-size: 5.6vh;
-  transition: 0.1s;
+  background-image: linear-gradient(to right, #fff, #8054ff);
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 0.5s;
 }
 
 .avatar {
-  width: 10vh;
+  width: 9vh;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   margin: -20%;
+  border: 0.5px solid #8054ff;
 }
 
 .avatar:hover {
-  transition: 4s;
+  transition: 1s;
   transform: scale(1.1);
-}
-
-.nav-link {
-  margin: auto 2vw auto 0.5vw;
-  font-weight: 200;
+  border: 2px solid #8054ff;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 .navbar-light .navbar-nav .nav-link {
+  margin: auto 2vw auto 2vw;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
   color: #fff;
   font-family: "Readex Pro", sans-serif;
+  font-size: 20px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
   color: #8054ff;
+  transition: 0.25s;
 }
 
 .dropdown-menu {
   background-color: #8054ff;
+  opacity: 0.9;
 }
 
 .dropdown-item {
   color: #fff;
   font-family: "Readex Pro", sans-serif;
   font-weight: 200;
+  letter-spacing: 0.2rem;
 }
 
 .dropdown-item:hover {
   background-color: #ff5454;
   color: #fff;
-  border: none;
   font-weight: 400;
 }
