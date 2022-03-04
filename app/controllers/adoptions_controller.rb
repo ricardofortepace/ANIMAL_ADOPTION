@@ -1,8 +1,8 @@
 class AdoptionsController < ApplicationController
   def new
-    @animal = Animal.find(params[:animal_id])
-    @adoption = Review.new
-    @adoption.animal = @animal
+    # @animal = Animal.find(params[:id])
+    # @adoption = Review.new
+    # @adoption.animal = @animal
   end
 
   def create
@@ -18,6 +18,6 @@ class AdoptionsController < ApplicationController
   end
 
   def show
-    @adoption = Adoption.find(params[:id])
+    # @adoption = Adoption.find(params[:id])
   end
 end
