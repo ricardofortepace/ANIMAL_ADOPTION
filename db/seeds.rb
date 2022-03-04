@@ -1,7 +1,7 @@
 require 'faker'
 puts 'funcionando'
 10.times do
-  user = User.new(name: Faker::Name.name_with_middle, email: Faker::Internet.email, password: Faker::IDNumber.brazilian_citizen_number)
+  user = User.new(name: Faker::Name.name_with_middle, email: Faker::Internet.email, password: Faker::IDNumber.brazilian_citizen_number, address: Faker::Address.street_address)
   user.save!
   puts "#{user} created!"
   3.times do
