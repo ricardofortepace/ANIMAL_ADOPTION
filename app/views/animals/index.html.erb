@@ -3,12 +3,12 @@
     <% @animals.each do |animal| %>
       <%= link_to animal do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-        <div> genre: <%= animal.genre %> | age: <%= animal.age %> </div>
+          genre: <%= animal.genre %> | age: <%= animal.age%>
         </div>
       <% end %>
     <% end %>
-
   </div>
-  <div class="my-5"><%== pagy_nav(@pagy) %></div>
-  <%# link_to 'New animal', new_animal_path, class: 'btn btn-primary' %>
 </div>
+
+<div class="my-5"><%== pagy_nav(@pagy) %></div>
+<%# link_to 'New animal', new_animal_path, class: 'btn btn-primary' %>
