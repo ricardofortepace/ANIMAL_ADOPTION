@@ -18,6 +18,6 @@ class AdoptionsController < ApplicationController
   end
 
   def show
-    @adoption = Adoption.find(params[:id])
+    # @adoption = Adoption.find(params[:id])
   end
 end
