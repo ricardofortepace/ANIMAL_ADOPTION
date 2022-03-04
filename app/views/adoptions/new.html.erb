@@ -1,0 +1,24 @@
+<div class="container my-5">
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <p><strong>create at</strong></p>
+      <p><%= @animal.created_at %></p>
+      <p><strong>specie</strong></p>
+      <p><%= @animal.specie %></p>
+      <p><strong>breed</strong></p>
+      <p><%= @animal.breed %></p>
+      <p><strong>gender</strong></p>
+      <p><%= @animal.genre %></p>
+      <p><strong>age</strong></p>
+      <p><%= @animal.age %> years</p>
+      <p><strong>castrated</strong></p>
+      <p><%= @animal.castrate %></p>
+      <p><strong>description</strong></p>
+      <p><%= @animal.specie %></p>
+    </div>
+  </div>
+
+  <%= link_to 'Edit', edit_animal_path(@animal) %> |
+  <%= link_to 'Back', animals_path %>
+</div>
