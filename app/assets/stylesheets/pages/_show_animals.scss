@@ -1,0 +1,94 @@
+.cont-card {
+  position: relative;
+}
+
+.field-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 5vw;
+  position: relative;
+}
+
+.card-img {
+  width: 100%;
+  margin-top: 40px;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.5);
+}
+
+.card-cont {
+  position: absolute;
+  left: 43vw;
+  top: 7vh;
+}
+
+.botoes {
+  position: absolute;
+  right: 12px;
+  bottom: 25px;
+}
+
+.button-go-share {
+  text-decoration: none;
+  padding: 7px 25px;
+  background-color: #8054ff;
+  margin: 0 5px;
+  border-radius: 30px;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  border: 3px solid #8054ff;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
+}
+
+.button-go-share:hover {
+  background-color: #fff;
+  color: #8054ff;
+  border: 3px solid #8054ff;
+}
+
+.button-go-back {
+  text-decoration: none;
+  padding: 7px 25px;
+  background-color: #ff5454;
+  margin: 0 5px;
+  border-radius: 30px;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  border: 3px solid #ff5454;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
+}
+
+.button-go-back:hover {
+  background-color: #fff;
+  color: #ff5454;
+  border: 3px solid #ff5454;
+}
+
+.button-go-take {
+  text-decoration: none;
+  padding: 7px 25px;
+  background-color: white;
+  margin: 0 5px;
+  border-radius: 30px;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  color: #ff5454;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  border: 3px solid #ff5454;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
+}
+
+.button-go-take:hover {
+  background-color: #ff5454;
+  color: #fff;
+  border: 3px solid #ff5454;
+}
