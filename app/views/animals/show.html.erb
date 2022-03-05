@@ -17,12 +17,16 @@
       <p class="titulo"><strong>castrated</strong></p>
       <p class="info"><%= @animal.castrate %></p>
       <p class="titulo"><strong>description</strong></p>
-      <p class="info"><%= @animal.specie %></p>
+      <p class="info"><%= @animal.description %></p>
     </div>
     <div class="botoes">
       <%= link_to 'share', animals_path, class:"button-go-share" %>
       <%= link_to 'back', animals_path, class:"button-go-back" %>
-      <%# <% <%= link_to 'take me home! 🐶', adoption_path, class:"button-go-take" %>
+
+      <% if policy(@animal).edit? %>
+        <%= link_to 'edit', edit_animal_path, class:"" %>
+        <%= link_to 'delete', animals_path(@animal), method: 'DELETE', class:"", data: { confirm: "are you sure?" } %>
+      <% end %>
 
       <%= simple_form_for [@animal, @adoption] do |f| %>
         <%= f.button :submit, "take me home! 🐶😺", class: "button-go-take" %>

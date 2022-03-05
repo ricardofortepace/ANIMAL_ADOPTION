@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :animals do
-    resources :adoptions, only: [:create, :new]
+    resources :adoptions, only: %i[create new]
   end
   resources :adoptions, only: [:show]
 end

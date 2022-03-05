@@ -3,26 +3,31 @@ class AnimalsController < ApplicationController
   # GET /animals
   def index
     @pagy, @animals = pagy(@animals = Animal.all)
+    @animals = policy_scope(Animal)
   end
 
   # GET /animals/1
   def show
     @adoption = Adoption.new
+    authorize @animal
   end
 
   # GET /animals/new
   def new
     @animal = Animal.new
+    authorize @animal
   end
 
   # GET /animals/1/edit
   def edit
+    authorize @animal
   end
 
   # POST /animals
   def create
     @animal = Animal.new(animal_params)
     @animal.user = current_user
+    authorize @animal
 
     if @animal.save
       redirect_to @animal, notice: 'The animal was successfully created.'
@@ -38,12 +43,14 @@ class AnimalsController < ApplicationController
     else
       render :edit
     end
+    authorize @animal
   end
 
   # DELETE /animals/1
   def destroy
+    authorize @animal
     @animal.destroy
-    redirect_to animals_url, notice: 'The animal was successfully destroyed.'
+    redirect_to animals_url, notice: 'The animal was successfully removed.'
   end
 
   private
