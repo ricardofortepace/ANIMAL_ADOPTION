@@ -16,7 +16,7 @@
 
 .container-geral {
   margin: 6% auto;
-  width: 70%;
+  width: 60%;
 }
 
 .tit-sign-up {
@@ -38,7 +38,8 @@
 }
 
 .button-mg {
-  margin-top: 20px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .simple_form {
@@ -83,7 +84,7 @@
 }
 
 .btn {
-  padding: 3px 45.5%;
+  // padding: 3px 45.5%;
   border-radius: 30px;
   border: 3px solid #8054ff;
   font-weight: 400;
@@ -108,9 +109,12 @@
 
 .link-below {
   text-decoration: none;
-  margin: 0;
-  font-size: 14px;
+  font-weight: 200;
   color: #868686;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 12px;
+  text-transform: lowercase;
+  position: absolute;
 }
 
 .link-below:hover {
@@ -144,8 +148,8 @@
   font-size: 14px;
   text-transform: lowercase;
   position: absolute;
-  right: 170px;
-  bottom: 90px;
+  right: 250px;
+  bottom: 160px;
 }
 
 .btn-p:hover {
