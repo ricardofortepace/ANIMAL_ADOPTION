@@ -8,6 +8,12 @@
   margin-bottom: 0;
 }
 
+.cancel-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .container-geral {
   margin: 6% auto;
   width: 70%;
@@ -28,6 +34,7 @@
   width: 100%;
   align-items: center;
   margin: 0 auto;
+  position: relative;
 }
 
 .button-mg {
@@ -127,4 +134,20 @@
   font-family: "Readex Pro", sans-serif;
   opacity: 0.2;
   font-size: 14px;
+}
+
+.btn-p {
+  text-decoration: none;
+  font-weight: 200;
+  color: #868686;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  text-transform: lowercase;
+  position: absolute;
+  right: 170px;
+  bottom: 90px;
+}
+
+.btn-p:hover {
+  color: rgb(255, 0, 0);
 }
