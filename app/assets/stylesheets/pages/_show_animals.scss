@@ -1,21 +1,41 @@
 .cont-card {
-  position: relative;
-}
-
-.field-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 5vw;
   position: relative;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.5);
+  margin-top: 40px;
 }
 
 .card-img {
-  width: 100%;
-  margin-top: 40px;
-  background-color: #fff;
   position: relative;
-  box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.5);
+  height: 100%;
+}
+
+.animal-text1 {
+  position: absolute;
+  top: 15px;
+  left: 560px;
+}
+
+.animal-text2 {
+  position: absolute;
+  top: 15px;
+  left: 745px;
+}
+
+.animal-text3 {
+  position: absolute;
+  top: 15px;
+  left: 930px;
+}
+
+.animal-text4 {
+  position: absolute;
+  top: 175px;
+  left: 560px;
 }
 
 .card-cont {
@@ -28,6 +48,23 @@
   position: absolute;
   right: 12px;
   bottom: 25px;
+}
+
+.button-go-destroy {
+  text-decoration: none;
+  padding: 7px 25px;
+  background-color: #fff;
+  margin: 0 5px;
+  border-radius: 30px;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  color: #8054ff;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  border: 3px solid #8054ff;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
+  position: absolute;
+  right: 505px;
 }
 
 .button-go-share {
@@ -99,21 +136,19 @@
   border: 3px solid #ff5454;
 }
 
-.titulo {
+.info {
   font-weight: 400;
   font-size: 14px;
-  color: #ff5454;
-  font-size: 22px;
+  color: #868686;
+  font-size: 18px;
   margin: 4px;
 }
 
-.titulo:hover {
-  color: #8054ff;
-}
+.titulo {
+  color: #ff5454;
+  letter-spacing: 0.2rem;
 
-.info {
-  color: #868686;
   font-weight: 200;
-  font-size: 18px;
+  font-size: 24px;
   margin: 7px;
 }

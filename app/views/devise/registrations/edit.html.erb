@@ -5,9 +5,6 @@
 
 
 
-
-
-
 <div class="container-geral">
   <div class="container">
     <div class="row">
@@ -50,8 +47,9 @@
                 </div>
               </div>
               <%= f.button :submit, "save your changes", class:"col-12 button-mg" %>
+              <%= link_to "delete my account", registration_path(resource_name), data: { confirm: "are you sure?" }, method: :delete, class:"btn-delete"  %>
 
-              <%= link_to "delete my account", registration_path(resource_name), data: { confirm: "are you sure?" }, method: :delete, class:"btn-p col-2"  %>
+
 
           </div>
         <% end %>

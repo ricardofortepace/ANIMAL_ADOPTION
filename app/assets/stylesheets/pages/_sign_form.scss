@@ -39,6 +39,7 @@
 
 .button-mg {
   margin-top: 10px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -153,5 +154,20 @@
 }
 
 .btn-p:hover {
+  color: rgb(255, 0, 0);
+}
+
+.btn-delete {
+  text-decoration: none;
+  font-weight: 200;
+  color: #868686;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  text-transform: lowercase;
+  width: 20%;
+  margin-top: 3px;
+}
+
+.btn-delete:hover {
   color: rgb(255, 0, 0);
 }

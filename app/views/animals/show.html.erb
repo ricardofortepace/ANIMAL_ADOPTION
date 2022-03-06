@@ -1,25 +1,32 @@
-<div class="cont-card">
-  <div class="field-card">
+  <div class="cont-card">
+
     <div class="card-img">
-      <% @animal.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 540, width: 540, crop: :fill %>
+      <% @animal.photos.find(0) do |photo| %>
+        <%= cl_image_tag photo.key, height: 540, width: 540, crop: :fill %>
       <% end %>
     </div>
-    <div class="card-cont">
+    <div class="animal-text1">
       <p class="titulo"><strong>specie</strong></p>
       <p class="info"><%= @animal.specie %></p>
       <p class="titulo"><strong>breed</strong></p>
       <p class="info"><%= @animal.breed %></p>
+    </div>
+    <div class="animal-text2">
       <p class="titulo"><strong>gender</strong></p>
       <p class="info"><%= @animal.genre %></p>
       <p class="titulo"><strong>age</strong></p>
       <p class="info"><%= @animal.age %> years</p>
+    </div>
+    <div class="animal-text3">
       <p class="titulo"><strong>castrated</strong></p>
       <p class="info"><%= @animal.castrate %></p>
+    </div>
+    <div class="animal-text4">
       <p class="titulo"><strong>description</strong></p>
       <p class="info"><%= @animal.description %></p>
     </div>
     <div class="botoes">
+      <%= link_to 'edit', animals_path, class:"button-go-destroy" %>
       <%= link_to 'share', animals_path, class:"button-go-share" %>
       <%= link_to 'back', animals_path, class:"button-go-back" %>
 
@@ -31,5 +38,6 @@
       <%= simple_form_for [@animal, @adoption] do |f| %>
         <%= f.button :submit, "take me home! 🐶😺", class: "button-go-take" %>
       <%end %>
+    </div>
   </div>
 </div>
