@@ -1,52 +1,51 @@
-<div class="form-container">
-  <div class="form-content">
+<div class="container-geral">
+  <div class="container">
+    <div class="row">
 
-      <h2>sign up</h2>
+        <h2 class="tit-sign-up">sign up</h2>
 
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= f.error_notification %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
 
+                <div class="container-sign-up">
+                  <div class="col-5">
+                    <%= f.input :email,
+                                placeholder: 'your email here',
+                                required: true,
+                                autofocus: true,
+                                input_html: { autocomplete: "email" }%>
+                    <%= f.input :password,
+                                placeholder: 'minimum of 6 characters',
+                                required: true,
+                                input_html: { autocomplete: "new-password" } %>
+                    <%= f.input :password_confirmation,
+                                placeholder: 'minimum of 6 characters',
+                                required: true,
+                                input_html: { autocomplete: "new-password" } %>
 
-          <div class="form-inputs">
-            <div class="form-container-up">
-              <%= f.input :photo, as: :file %>
-              <%= f.input :email,
-                          placeholder: 'someone@somewhere.com',
-                          required: true,
-                          autofocus: true,
-                          input_html: { autocomplete: "email" }%>
+                  </div>
+                  <div class="col-5">
+                    <%= f.input :name,
+                                placeholder: 'full name',
+                                required: true,
+                                autofocus: true,
+                                input_html: { autocomplete: "name" }%>
+                    <%= f.input :photo, as: :file %>
+                    <%= f.input :address,
+                                placeholder: 'your address here',
+                                required: true,
+                                autofocus: true,
+                                input_html: { autocomplete: "address" }%>
+                  </div>
+                </div>
+              <%= f.button :submit, "sign up", class:"col-12 button-mg" %>
             </div>
-            <div class="form-container-up">
-              <%= f.input :name,
-                          placeholder: 'John Doe',
-                          required: true,
-                          autofocus: true,
-                          input_html: { autocomplete: "name" }%>
-              <%= f.input :address,
-                          placeholder: '16 Vla Gaudelet, 75011 Paris, France',
-                          required: true,
-                          autofocus: true,
-                          input_html: { autocomplete: "address" }%>
-            </div>
-            <div class="form-container-up">
-              <%= f.input :password,
-                          placeholder: 'minimum of 6 characters',
-                          required: true,
-                          input_html: { autocomplete: "new-password" } %>
-              <%= f.input :password_confirmation,
-                          placeholder: 'minimum of 6 characters',
-                          required: true,
-                          input_html: { autocomplete: "new-password" } %>
-            </div>
-            <div class="form-container-up">
-              <%= f.button :submit, "Sign up" %>
-            </div>
-        </div>
-      <% end %>
+        <% end %>
 
-      <%- if controller_name != 'sessions' %>
-      <%= link_to "login", new_session_path(resource_name), class: "link-below" %><br />
-      <% end %>
+        <%- if controller_name != 'sessions' %>
+        <%= link_to "do you mean to login?", new_session_path(resource_name), class: "link-below" %><br />
+        <% end %>
 
+    </div>
   </div>
 </div>

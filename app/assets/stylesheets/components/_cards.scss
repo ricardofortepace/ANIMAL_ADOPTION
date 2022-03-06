@@ -1,7 +1,11 @@
+.container {
+  position: relative;
+}
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  margin: 0 auto;
+  // grid-gap: 10px;
 }
 
 // Smallest device
@@ -32,24 +36,38 @@
   }
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
 .card-category {
+  margin: 10px 10px;
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 34vh;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.5);
+}
+
+.pagina {
+  position: absolute;
+  bottom: 50px;
+  left: 130px;
+}
+
+.detail {
+  font-size: 15px;
+  margin-right: 7px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: rgb(221, 221, 221);
+  font-family: "Readex Pro", sans-serif;
+  text-transform: lowercase;
+}
+
+.detail-plus {
+  font-size: 15px;
+  margin-right: 10px;
+  color: #ff5454;
 }
