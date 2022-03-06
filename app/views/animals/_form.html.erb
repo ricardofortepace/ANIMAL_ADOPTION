@@ -13,6 +13,11 @@
           <%= f.input :castrate %>
           <%= f.input :description, as: :text %>
           <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= f.input :address,
+                          placeholder: 'Where we can find your pet',
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "address" }%>
         </div>
 
         <div class="form-actions">
