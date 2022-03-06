@@ -23,10 +23,11 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'pagy', '~> 5.10' # omit patch digit
 gem 'pundit' # user authorization
-gem 'dotenv-rails', groups: [:development, :test]
+
 
 gem 'devise'
 gem 'faker'
+gem "geocoder"
 
 gem 'cloudinary', '~> 1.16.0'
 # Use Active Storage variant
