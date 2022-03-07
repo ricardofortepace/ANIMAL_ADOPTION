@@ -1,14 +1,26 @@
 .filterbar {
-  // background: linear-gradient(to bottom, #f4f4f4e5, #f4f4f4);
+  background: linear-gradient(to bottom, #f4f4f4e5, #f4f4f4);
   height: 125px;
   position: fixed;
   width: 100%;
-  background-color: black;
   margin: 0;
 }
 
 .filterbar-margin {
   display: flex;
+  // background-color: black;
+  width: 89%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.field-pet {
+  width: 50%;
+}
+
+.separation {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .btn-small,
