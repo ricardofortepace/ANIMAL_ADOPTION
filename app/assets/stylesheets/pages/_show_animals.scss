@@ -44,11 +44,11 @@
   top: 8vh;
 }
 
-.botoes {
-  position: absolute;
-  right: 12px;
-  bottom: 25px;
-}
+// .botoes {
+//   position: absolute;
+//   right: 12px;
+//   bottom: 35px;
+// }
 
 .button-go-edit {
   text-decoration: none;
@@ -64,7 +64,8 @@
   border: 3px solid #8054ff;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
-  right: 430px;
+  right: 450px;
+  bottom: 20px;
 }
 
 .button-go-edit:hover {
@@ -87,7 +88,8 @@
   border: 3px solid #8054ff;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
-  right: 280px;
+  right: 300px;
+  bottom: 20px;
 }
 
 .button-go-destroy:hover {
@@ -110,7 +112,8 @@
   border: 3px solid #8054ff;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
-  right: 140px;
+  right: 160px;
+  bottom: 20px;
 }
 
 .button-go-share:hover {
@@ -133,7 +136,8 @@
   border: 3px solid #ff5454;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
-  right: 5px;
+  right: 25px;
+  bottom: 20px;
 }
 
 .button-go-back:hover {
@@ -156,8 +160,8 @@
   border: 3px solid #ff5454;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
-  right: 1px;
-  bottom: 55px;
+  right: 21px;
+  bottom: 85px;
 }
 
 .button-go-take:hover {
