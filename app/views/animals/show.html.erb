@@ -1,15 +1,15 @@
 <div class="cont-card">
-
   <div class="card-img">
     <%if @animal.photos.length > 1%>
       <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class=”carousel-inner”>
-          <%@animal.photos.each_with_index do |photo,i|%>
+          <%@animal.photos.each_with_index do |photo, i|%>
             <div class="carousel-item <%= "active " if i==0 %>">
-              <%= cl_image_tag photo.key, height: 540, width: 540, crop: :fill %>
+              <%= cl_image_tag photo.key, height: 540, width: 540, crop: :fill%>
             </div>
           <%end%>
         </div>
+
         <div class="carousel-buttoms">
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -21,9 +21,10 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
+
       </div>
     <%elsif @animal.photos.length == 1%>
-      <%= cl_image_tag @animal.photos.first.key, height: 540, width: 540, crop: :fill %>
+      <%= cl_image_tag @animal.photos.first.key, height: 540, width: 540, crop: :fill%>
     <%else%>
       <img src="https://img.freepik.com/free-vector/adopt-pet-concept_23-2148523582.jpg", alt="Sem foto ainda">
     <%end%>
@@ -53,7 +54,7 @@
     <p class="info"><%= @animal.description %></p>
   </div>
 
-  <div class="botoes">
+  <div class="botoes-take-share-back">
     <% if policy(@animal).edit? %>
       <%= link_to 'edit', edit_animal_path, class:"button-go-edit" %>
       <%= link_to 'delete', animal_path(@animal), method: 'DELETE', class:"button-go-destroy", data: { confirm: "are you sure?" } %>

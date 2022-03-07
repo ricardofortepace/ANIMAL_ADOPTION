@@ -1,14 +1,27 @@
 .filterbar {
-  // background: linear-gradient(to bottom, #f4f4f4e5, #f4f4f4);
+  background: linear-gradient(to bottom, #f4f4f4e5, #f4f4f4);
   height: 125px;
   position: fixed;
   width: 100%;
-  background-color: black;
   margin: 0;
 }
 
 .filterbar-margin {
   display: flex;
+  // background-color: black;
+  width: 89%;
+  margin: 0 auto;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.field-pet {
+  width: 45%;
+}
+
+.separation {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .btn-small,
@@ -21,7 +34,12 @@ label {
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
   text-transform: lowercase;
-  margin: o auto;
+  margin: 5px auto 0;
+}
+
+.btn-small:hover,
+label:hover {
+  color: #8054ff;
 }
 
 .btn-small-with-border {

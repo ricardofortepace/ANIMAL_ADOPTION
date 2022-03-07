@@ -49,11 +49,12 @@
   top: 8vh;
 }
 
-// .botoes {
-//   position: absolute;
-//   right: 12px;
-//   bottom: 35px;
-// }
+.botoes-take-share-back {
+  position: absolute;
+  right: 12px;
+  bottom: 35px;
+  z-index: 10;
+}
 
 .button-go-edit {
   text-decoration: none;

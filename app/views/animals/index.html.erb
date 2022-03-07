@@ -1,36 +1,43 @@
   <div class="filterbar">
-      <div class="filterbar-margin">
 
-        <%= form_with url: animals_url, method: :get do |f|%>
-
-        <div class="separation">
-          <%= f.check_box :specie_dog, class: "form-check-input" %>
-          <%= f.label :specie_dog, 'doggo' %>
-
-          <%= f.check_box :specie_cat, class: "form-check-input" %>
-          <%= f.label :specie_cat, 'pussy cat' %>
-        </div>
-
-        <div class="separation">
-          <%= f.check_box :gender_male, class: "form-check-input" %>
-          <%= f.label :gender_male, 'male' %>
+        <%= form_with url: animals_url, class: "filterbar-margin", method: :get do |f|%>
 
 
-          <%= f.check_box :gender_female, class: "form-check-input" %>
-          <%= f.label :gender_female, 'female' %>
-        </div>
+          <div class="field-pet">
+            <div class="separation">
+              <%= f.check_box :specie_dog, class: "form-check-input" %>
+              <%= f.label :specie_dog, 'doggo', class: "mx-2" %>
 
-        <div class="separation">
-          <%= f.check_box :castrate, class: "form-check-input" %>
-          <%= f.label :castrate, 'castrated' %>
-        </div>
+              <%= f.check_box :specie_cat, class: "form-check-input" %>
+              <%= f.label :specie_cat, 'pussy cat', class: "mx-2" %>
 
-        <div class="separation">
-          <%= f.text_field :description,
+              <%= f.check_box :gender_male, class: "form-check-input" %>
+              <%= f.label :gender_male, 'male', class: "mx-2" %>
+
+              <%= f.check_box :gender_female, class: "form-check-input" %>
+              <%= f.label :gender_female, 'female', class: "mx-2" %>
+
+              <%= f.check_box :castrate, class: "form-check-input" %>
+              <%= f.label :castrate, 'castrated', class: "mx-2" %>
+
+              <%= f.check_box :castrate, class: "form-check-input" %>
+              <%= f.label :castrate, 'uploaded by me', class: "mx-2" %>
+            </div>
+
+
+            <div class="separation">
+              <%= f.text_field :description,
+                  class: "form-control",
+                  placeholder: "behavior, size, colour, and other qualities"%>
+                  <%= f.submit "this a good boy?", class: "btn-small" %>
+            </div>
+          </div>
+
+          <div class="field-pet">
+            <%= f.text_field :address,
               class: "form-control",
-              placeholder: "behavior, size, colour, and other qualities"%>
-              <%= f.submit "this a good boy?", class: "btn-small" %>
-        </div>
+              placeholder: "my current address"%>
+
 
         <div data-controller="geocoder" data-geocoder-api-key-value=<%= ENV['MAPBOX_API_KEY'] %>>
           <%= f.text_field :address,
@@ -39,13 +46,16 @@
             data: { geocoder_target: "address" } %>
         </div>
 
-        <%= f.check_box :user_address, class: "form-check-input" %>
-        <%= f.label :user_address, 'my homeplace 🏠' %>
+            <%= f.check_box :user_address, class: "form-check-input" %>
+            <%= f.label :user_address, 'my homeplace 🏠' %>
 
-        <%= f.range_field :range, min: 0, max: 200, step: 1, class: "range-style"%>
-        <%= f.label :range, "range within max. 200 km", class: "btn-small" %>
-        <%= f.submit "go catch!", class: "btn-small" %>
-      <% end %>
+
+            <%= f.range_field :range, min: 0, max: 200, step: 1, class: "range-style"%>
+            <%= f.label :range, "range within max. 200 km", class: "btn-small" %>
+            <%= f.submit "go catch!", class: "btn-small" %>
+
+          </div>
+          <% end %>
 
        </div>
     </div>
