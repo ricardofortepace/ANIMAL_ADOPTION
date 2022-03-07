@@ -2,7 +2,7 @@ class AnimalsController < ApplicationController
   before_action :set_animal, only: %i[show edit update destroy]
   # GET /animals
   def index
-    @pagy, @animals = pagy(@animals = Animal.all)
+    @animals = Animal.all
     @animals = policy_scope(Animal)
 
     # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
