@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :animals, dependent: :destroy
   has_many :adoptions, dependent: :destroy
   has_one_attached :photo
-  # validates :address, presence: true
+  validates :address, presence: true
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

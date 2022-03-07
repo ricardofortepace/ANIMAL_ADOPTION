@@ -1,7 +1,32 @@
-<h1>Editing Animal</h1>
+<div class="container-geral">
+  <div class="container">
+    <div class="row">
 
-<%= render 'form', animal: @animal %>
-<%= link_to 'Show', @animal %> |
-<%= link_to 'Back', animals_path %>
+        <h2 class="tit-sign-up">edit animal info</h2>
 
-<%# ADICIONAR BOTÃO DE DELETAR ANIMAL %>
+        <%= simple_form_for(@animal) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+            <div class="container-sign-up">
+              <div class="col-5">
+                  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+                  <%= f.input :specie, collection: ["cat", "dog"]  %>
+                  <%= f.input :genre, collection: ["female", "male"] %>
+                  <%= f.input :breed %>
+                </div>
+                <div class="col-5">
+                  <%= f.input :age %>
+                  <%= f.input :castrate %>
+                  <%= f.input :description, as: :text %>
+                  <%= f.input :address,
+                                  placeholder: 'where we can find this pet',
+                                  required: true,
+                                  autofocus: true,
+                                  input_html: { autocomplete: "address" }%>
+                </div>
+              </div>
+              <%= f.button :submit,  "save your changes", class: "col-12 button-mg" %>
+          </div>
+        <% end %>
+    </div>

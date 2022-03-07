@@ -50,6 +50,29 @@
   bottom: 25px;
 }
 
+.button-go-edit {
+  text-decoration: none;
+  padding: 7px 25px;
+  background-color: #fff;
+  margin: 0 5px;
+  border-radius: 30px;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  color: #8054ff;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  border: 3px solid #8054ff;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
+  position: absolute;
+  right: 430px;
+}
+
+.button-go-edit:hover {
+  background-color: #8054ff;
+  color: #fff;
+  border: 3px solid #8054ff;
+}
+
 .button-go-destroy {
   text-decoration: none;
   padding: 7px 25px;
@@ -64,7 +87,13 @@
   border: 3px solid #8054ff;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
-  right: 505px;
+  right: 280px;
+}
+
+.button-go-destroy:hover {
+  background-color: #8054ff;
+  color: #fff;
+  border: 3px solid #8054ff;
 }
 
 .button-go-share {
@@ -81,7 +110,7 @@
   border: 3px solid #8054ff;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
-  right: 380px;
+  right: 140px;
 }
 
 .button-go-share:hover {
@@ -104,7 +133,7 @@
   border: 3px solid #ff5454;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
-  right: 265px;
+  right: 5px;
 }
 
 .button-go-back:hover {
@@ -128,6 +157,7 @@
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
   right: 1px;
+  bottom: 55px;
 }
 
 .button-go-take:hover {
@@ -147,7 +177,6 @@
 .titulo {
   color: #ff5454;
   letter-spacing: 0.2rem;
-
   font-weight: 200;
   font-size: 24px;
   margin: 7px;
