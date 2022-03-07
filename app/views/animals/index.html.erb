@@ -1,17 +1,45 @@
   <div class="row">
     <div class="col-12 filterbar">
+      <form>
+        <div class="specie-check">
+          <input type = "checkbox" id = "specie-cat" name = "cat" value = "ATUALIZAR">
+          <label for = "specie"> cat </label>
+          <input type = "checkbox" id = "specie-dog" name = "cat" value = "ATUALIZAR">
+          <label for = "specie"> dog </label>
+        </div>
+        <div class="gendere-check">
+          <input type = "checkbox" id = "gender-male" name = "male" value = "ATUALIZAR">
+          <label for = "gender"> male </label>
+          <input type = "checkbox" id = "gender-female" name = "female" value = "ATUALIZAR">
+          <label for = "gender"> female </label>
+        </div>
+        <div class="castrate-check">
+          <input type = "checkbox" id = "castrated" name = "castrate" value = "ATUALIZAR">
+          <label for = "castrate"> castrated </label>
+        </div>
+      </form>
 
-    <form>
-      <input type = "checkbox" name = "specie" value = "ATUALIZAR">
-      <label for = "subscribeNews"> specie </label>
-      <input type = "checkbox" name = "gender" value = "ATUALIZAR">
-      <label for = "subscribeNews"> gender </label>
-      <input type = "checkbox" name = "castrate" value = "ATUALIZAR">
-      <label for = "subscribeNews"> castrate </label>
-      <input type="text" placeholder="behavior, size, colour, and other qualities :)">
-      <button type = "submit"> filtrar </button>
-    </form>
+      <form>
+        <input type="text" placeholder="behavior, size, colour, and other qualities :)">
+        <button type = "submit"> filter </button>
+      </form>
 
+      <form>
+        <input type = "checkbox" id = "my-address" name = "my-address" value = "ATUALIZAR">
+        <label for = "castrate">use registered address </label>
+      </form>
+
+      <form>
+        <input type="text" id="my-current-address" placeholder ="my current address">
+        <label for = "my-current-address"> use a new address </label>
+        <button type = "submit"> find </button>
+      </form>
+
+      <form>
+        <input type= "text" id= "range" placeholder ="range in km">
+        <label for = "range"> range within </label>
+        <button type = "submit"> find </button>
+      </form>
     </div>
   </div>
 
