@@ -11,7 +11,7 @@
 
                 <div class="container-sign-up">
                   <div class="col-5">
-                    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+                      <%= f.input :photos, as: :file, input_html: { multiple: true }, input_html: { class: 'first' } %>
                     <%= f.input :specie, collection: ["cat", "dog"] %>
                     <%= f.input :genre, collection: ["female", "male"] %>
                     <%= f.input :breed %>
@@ -21,16 +21,16 @@
                     <%= f.input :castrate %>
                     <%= f.input :description, as: :text %>
                     <%= f.input :address,
-                          placeholder: 'where we can find this pet',
-                          required: true,
-                          autofocus: true,
-                          input_html: { autocomplete: "address" }%>
+                                input_html: { data: { geocoder_target: "address" }, class: "d-none" },
+                                wrapper_html: { data: { controller: "geocoder",
+                                geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
                   </div>
                 </div>
               <%= f.button :submit, "add for adoption", class:"col-12 button-mg" %>
 
             </div>
         <% end %>
+
 
 
     </div>
