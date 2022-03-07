@@ -1,52 +1,64 @@
-  <div class="row">
-    <div class="col-12 filterbar">
-      <form>
-        <div class="specie-check">
-          <input type = "checkbox" id = "specie-cat" name = "cat" value = "ATUALIZAR">
-          <label for = "specie"> cat </label>
-          <input type = "checkbox" id = "specie-dog" name = "cat" value = "ATUALIZAR">
-          <label for = "specie"> dog </label>
+  <div class="filterbar">
+      <div class="filterbar-margin">
+
+        <%= form_with url: animals_url, method: :get do |f|%>
+
+        <div class="separation">
+          <%= f.check_box :specie_dog, class: "form-check-input" %>
+          <%= f.label :specie_dog, 'doggo' %>
+
+          <%= f.check_box :specie_cat, class: "form-check-input" %>
+          <%= f.label :specie_cat, 'pussy cat' %>
         </div>
-        <div class="gendere-check">
-          <input type = "checkbox" id = "gender-male" name = "male" value = "ATUALIZAR">
-          <label for = "gender"> male </label>
-          <input type = "checkbox" id = "gender-female" name = "female" value = "ATUALIZAR">
-          <label for = "gender"> female </label>
+
+        <div class="separation">
+          <%= f.check_box :gender_male, class: "form-check-input" %>
+          <%= f.label :gender_male, 'male' %>
+
+
+          <%= f.check_box :gender_female, class: "form-check-input" %>
+          <%= f.label :gender_female, 'female' %>
         </div>
-        <div class="castrate-check">
-          <input type = "checkbox" id = "castrated" name = "castrate" value = "ATUALIZAR">
-          <label for = "castrate"> castrated </label>
+
+        <div class="separation">
+          <%= f.check_box :castrate, class: "form-check-input" %>
+          <%= f.label :castrate, 'castrated' %>
         </div>
-      </form>
 
-      <form>
-        <input type="text" placeholder="behavior, size, colour, and other qualities :)">
-        <button type = "submit"> filter </button>
-      </form>
+        <div class="separation">
+          <%= f.text_field :description,
+              class: "form-control",
+              placeholder: "behavior, size, colour, and other qualities"%>
+              <%= f.submit "this a good boy?", class: "btn-small" %>
+        </div>
 
-      <form>
-        <input type = "checkbox" id = "my-address" name = "my-address" value = "ATUALIZAR">
-        <label for = "castrate">use registered address </label>
-      </form>
+        <%= f.text_field :address,
+           class: "form-control",
+           placeholder: "my current address"%>
 
-      <form>
-        <input type="text" id="my-current-address" placeholder ="my current address">
-        <label for = "my-current-address"> use a new address </label>
-        <button type = "submit"> find </button>
-      </form>
+        <%= f.check_box :user_address, class: "form-check-input" %>
+        <%= f.label :user_address, 'my homeplace 🏠' %>
 
-      <form>
-        <input type= "text" id= "range" placeholder ="range in km">
-        <label for = "range"> range within </label>
-        <button type = "submit"> find </button>
-      </form>
+        <%= f.range_field :range, min: 0, max: 200, step: 1, class: "range-style"%>
+        <%= f.label :range, "range within max. 200 km", class: "btn-small" %>
+        <%= f.submit "go catch!", class: "btn-small" %>
+      <% end %>
+
+       </div>
     </div>
   </div>
 
 
-<div class="container">
+
+
+
+
+
+
+
+<div class="container-animals">
   <div class="row">
-    <div class="cards my-3">
+    <div class="cards my-4">
       <% @animals.each do |animal| %>
         <%= link_to animal do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= animal.photos.attached? ? cl_image_path(animal.photos.first.key) : 'https://img.freepik.com/free-vector/adopt-pet-concept_23-2148523582.jpg' %>)">
