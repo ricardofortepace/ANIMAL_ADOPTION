@@ -21,7 +21,7 @@
   width: 100%;
   background-color: transparent;
   margin: 0;
-  height: 50px;
+  height: 43px;
   color: #404040;
   color: rgba(0, 0, 0, 0.75);
   padding: 6px 45px;
@@ -36,6 +36,7 @@
 .mapboxgl-ctrl-geocoder {
   background-color: transparent;
   box-shadow: none;
+  width: 100% !important;
 }
 
 .mapboxgl-ctrl-geocoder--button {

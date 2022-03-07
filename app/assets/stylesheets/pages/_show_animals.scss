@@ -71,6 +71,7 @@
   position: absolute;
   right: 450px;
   bottom: 20px;
+  z-index: 10;
 }
 
 .button-go-edit:hover {
@@ -95,6 +96,7 @@
   position: absolute;
   right: 300px;
   bottom: 20px;
+  z-index: 10;
 }
 
 .button-go-destroy:hover {
@@ -119,6 +121,7 @@
   position: absolute;
   right: 160px;
   bottom: 20px;
+  z-index: 10;
 }
 
 .button-go-share:hover {
@@ -143,6 +146,7 @@
   position: absolute;
   right: 25px;
   bottom: 20px;
+  z-index: 10;
 }
 
 .button-go-back:hover {
@@ -167,6 +171,7 @@
   position: absolute;
   right: 21px;
   bottom: 85px;
+  z-index: 10;
 }
 
 .button-go-take:hover {
