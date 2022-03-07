@@ -1,10 +1,58 @@
   <div class="cont-card">
 
     <div class="card-img">
-      <% @animal.photos&.first do |photo| %>
-        <%= cl_image_tag photo.key, height: 540, width: 540, crop: :fill %>
-      <% end %>
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+        <div class=”carousel-inner”>
+          <%@animal.photos.each_with_index do |photo,i|%>
+            <div class="carousel-item <%= "active " if i==0 %>">
+              <%= cl_image_tag photo.key, height: 540, width: 540, crop: :fill %>
+            </div>
+          <%end%>
+        </div>
+
+
+
+
+        <div class="carousel-buttoms">
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="animal-text1">
       <p class="titulo"><strong>specie</strong></p>
       <p class="info"><%= @animal.specie %></p>
@@ -28,14 +76,16 @@
     <div class="botoes">
       <% if policy(@animal).edit? %>
         <%= link_to 'edit', edit_animal_path, class:"button-go-edit" %>
-        <%= link_to 'delete', animals_path(@animal), method: 'DELETE', class:"button-go-destroy", data: { confirm: "are you sure?" } %>
+        <%= link_to 'delete', animal_path(@animal), method: 'DELETE', class:"button-go-destroy", data: { confirm: "are you sure?" } %>
       <% end %>
       <%= link_to 'share', animals_path, class:"button-go-share" %>
       <%= link_to 'back', animals_path, class:"button-go-back" %>
 
-
-      <%= simple_form_for [@animal, @adoption] do |f| %>
+      <% unless policy(@animal).edit? %>
+        <%= simple_form_for [@animal, @adoption] do |f| %>
         <%= f.button :submit, "take me home! 🐶😺", class: "button-go-take" %>
+      <% end %>
+
       <%end %>
     </div>
   </div>
