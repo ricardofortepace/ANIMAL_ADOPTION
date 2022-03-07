@@ -32,10 +32,10 @@
       <% end %>
       <%= link_to 'share', animals_path, class:"button-go-share" %>
       <%= link_to 'back', animals_path, class:"button-go-back" %>
-
-
-      <%= simple_form_for [@animal, @adoption] do |f| %>
-        <%= f.button :submit, "take me home! 🐶😺", class: "button-go-take" %>
+      <% unless policy(@animal).edit? %>
+        <%= simple_form_for [@animal, @adoption] do |f| %>
+          <%= f.button :submit, "take me home! 🐶😺", class: "button-go-take" %>
+        <% end %>
       <%end %>
     </div>
   </div>
