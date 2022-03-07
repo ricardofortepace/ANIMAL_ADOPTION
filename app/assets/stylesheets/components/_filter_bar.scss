@@ -1,18 +1,18 @@
 .filterbar {
-  background: linear-gradient(to bottom, #f4f4f4e5, #f4f4f4);
+  // background: linear-gradient(to bottom, #f4f4f4e5, #f4f4f4);
   height: 125px;
   position: fixed;
+  width: 100%;
+  background-color: black;
+  margin: 0;
 }
 
 .filterbar-margin {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 90%;
-  margin: 15px auto;
 }
 
-.btn-small {
+.btn-small,
+label {
   // border-radius: 150px;
   border: none;
   background: none;
@@ -21,5 +21,69 @@
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
   text-transform: lowercase;
-  margin: 0 auto;
+  margin: o auto;
+}
+
+.btn-small-with-border {
+  background: none;
+  font-weight: 400;
+  color: #868686;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  text-transform: lowercase;
+  margin: o auto;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  &::-moz-range-thumb {
+    border: none;
+  }
+}
+
+input[type="range"] {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  border-radius: 500px;
+  width: 400px;
+  max-width: 100%;
+  margin: 24px 0 16px;
+  transition: box-shadow 0.2s ease-in-out;
+  // Chrome
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    & {
+      cursor: pointer;
+      overflow: hidden;
+      height: 40px;
+      -webkit-appearance: none;
+      background-color: #ddd;
+    }
+    &::-webkit-slider-thumb {
+      cursor: pointer;
+      width: 40px;
+      -webkit-appearance: none;
+      height: 40px;
+      cursor: ew-resize;
+      background: #fff;
+      box-shadow: -340px 0 0 320px #ff5454, inset 0 0 0 40px #fff;
+      border-radius: 50%;
+      transition: box-shadow 0.2s ease-in-out;
+      position: relative;
+      // top: 1px;
+    }
+    &:active::-webkit-slider-thumb {
+      cursor: pointer;
+      background: #fff;
+      box-shadow: -340px 0 0 320px #8054ff, inset 0 0 0 3px #fff;
+    }
+  }
 }
