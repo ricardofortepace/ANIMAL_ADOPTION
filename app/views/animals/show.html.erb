@@ -28,7 +28,7 @@
     <div class="botoes">
       <% if policy(@animal).edit? %>
         <%= link_to 'edit', edit_animal_path, class:"button-go-edit" %>
-        <%= link_to 'delete', animals_path(@animal), method: 'DELETE', class:"button-go-destroy", data: { confirm: "are you sure?" } %>
+        <%= link_to 'delete', animal_path(@animal), method: 'DELETE', class:"button-go-destroy", data: { confirm: "are you sure?" } %>
       <% end %>
       <%= link_to 'share', animals_path, class:"button-go-share" %>
       <%= link_to 'back', animals_path, class:"button-go-back" %>
