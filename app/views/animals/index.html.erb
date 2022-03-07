@@ -1,50 +1,54 @@
   <div class="row">
     <div class="col-12 filterbar">
-      <form>
-        <div class="specie-check">
-          <input type = "checkbox" id = "specie-cat" name = "cat" value = "ATUALIZAR">
-          <label for = "specie"> cat </label>
-          <input type = "checkbox" id = "specie-dog" name = "cat" value = "ATUALIZAR">
-          <label for = "specie"> dog </label>
-        </div>
-        <div class="gendere-check">
-          <input type = "checkbox" id = "gender-male" name = "male" value = "ATUALIZAR">
-          <label for = "gender"> male </label>
-          <input type = "checkbox" id = "gender-female" name = "female" value = "ATUALIZAR">
-          <label for = "gender"> female </label>
-        </div>
-        <div class="castrate-check">
-          <input type = "checkbox" id = "castrated" name = "castrate" value = "ATUALIZAR">
-          <label for = "castrate"> castrated </label>
-        </div>
-      </form>
+      <div class="filterbar-margin">
+        <form>
+          <div class="specie-check">
+            <input type = "checkbox" id = "specie-cat" name = "cat" value = "ATUALIZAR" class ="form-check-input">
+            <label class="btn-small" for = "specie"> pussy cat </label>
+          </div>
 
-      <form>
-        <input type="text" placeholder="behavior, size, colour, and other qualities :)">
-        <button type = "submit"> filter </button>
-      </form>
+          <div class="specie-check">
+            <input type = "checkbox" id = "specie-dog" name = "cat" value = "ATUALIZAR" class ="form-check-input">
+            <label class="btn-small" for = "specie"> doggo </label>
+          </div>
 
-      <form>
-        <input type = "checkbox" id = "my-address" name = "my-address" value = "ATUALIZAR">
-        <label for = "castrate">use registered address </label>
-      </form>
+          <div class="gender-check">
+            <input type = "checkbox" id = "gender-male" name = "male" value = "ATUALIZAR" class ="form-check-input">
+            <label class="btn-small" for = "gender"> boy </label>
+            <input type = "checkbox" id = "gender-female" name = "female" value = "ATUALIZAR" class ="form-check-input">
+            <label class="btn-small" for = "gender"> girl </label>
+          </div>
+          <div class="castrate-check">
+            <input type = "checkbox" id = "castrated" name = "castrate" value = "ATUALIZAR" class ="form-check-input">
+            <label class="btn-small" for = "castrate"> castrated </label>
+          </div>
+        </form>
 
-      <form>
-        <input type="text" id="my-current-address" placeholder ="my current address">
-        <label for = "my-current-address"> use a new address </label>
-        <button type = "submit"> find </button>
-      </form>
+        <form>
+          <input type="text" placeholder="behavior, size, colour, and other qualities :)" class="form-control">
+          <button class="btn-small" type = "submit"> this a good boy </button>
+        </form>
 
-      <form>
-        <input type= "text" id= "range" placeholder ="range in km">
-        <label for = "range"> range within </label>
-        <button type = "submit"> find </button>
-      </form>
+        <form>
+          <input type = "checkbox" id = "my-address" name = "my-address" value = "ATUALIZAR" class ="form-check-input">
+          <label class="btn-small" for = "castrate">my homeplace 🏠 </label>
+        </form>
+
+        <form>
+          <input type="text" id="my-current-address" placeholder ="use a new address?" class="form-control">
+          <button class="btn-small" type = "submit"> find me </button>
+        </form>
+
+        <form>
+          <input type= "text" id= "range" placeholder ="range within" class="form-control">
+          <button class="btn-small" type = "submit"> go catch! </button>
+        </form>
+      </div>
     </div>
   </div>
 
 
-<div class="container">
+<div class="conrtainer container-animals">
   <div class="row">
     <div class="cards my-3">
       <% @animals.each do |animal| %>
