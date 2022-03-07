@@ -2,7 +2,7 @@
 
   <div class="card-img">
     <%if @animal.photos.length > 1%>
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class=”carousel-inner”>
           <%@animal.photos.each_with_index do |photo,i|%>
             <div class="carousel-item <%= "active " if i==0 %>">
