@@ -5,25 +5,24 @@
 
           <div class="field-pet">
             <div class="separation">
-              <%= f.check_box :specie_dog, class: "form-check-input mt-2" %>
+              <%= f.check_box :specie_dog, class: "form-check-input mt-1" %>
               <%= f.label :specie_dog, 'doggo', class: "mx-2" %>
 
-              <%= f.check_box :specie_cat, class: "form-check-input mt-2" %>
+              <%= f.check_box :specie_cat, class: "form-check-input mt-1" %>
               <%= f.label :specie_cat, 'pussy cat', class: "mx-2" %>
 
-              <%= f.check_box :gender_male, class: "form-check-input mt-2" %>
+              <%= f.check_box :gender_male, class: "form-check-input mt-1" %>
               <%= f.label :gender_male, 'male', class: "mx-2" %>
 
-              <%= f.check_box :gender_female, class: "form-check-input mt-2" %>
+              <%= f.check_box :gender_female, class: "form-check-input mt-1" %>
               <%= f.label :gender_female, 'female', class: "mx-2" %>
 
-              <%= f.check_box :castrate, class: "form-check-input mt-2" %>
+              <%= f.check_box :castrate, class: "form-check-input mt-1" %>
               <%= f.label :castrate, 'castrated', class: "mx-2" %>
 
-              <%= f.check_box :castrate, class: "form-check-input mt-2" %>
+              <%= f.check_box :castrate, class: "form-check-input mt-1" %>
               <%= f.label :castrate, 'uploaded by me', class: "mx-2" %>
             </div>
-
 
             <div class="separation">
               <%= f.text_field :description,
@@ -33,23 +32,33 @@
             </div>
           </div>
 
-        <div data-controller="geocoder" data-geocoder-api-key-value=<%= ENV['MAPBOX_API_KEY'] %>>
-          <%= f.text_field :address,
-            class: "form-control d-none",
-            placeholder: "my current address",
-            data: { geocoder_target: "address" } %>
-        </div>
+          <div class="field-pet2">
 
-            <%= f.check_box :user_address, class: "form-check-input" %>
-            <%= f.label :user_address, 'my homeplace 🏠' %>
+            <div class="separation">
+              <%= f.check_box :user_address, class: "form-check-input mt-1" %>
+              <%= f.label :user_address, 'my homeplace 🏠', class: "mx-2" %>
+            </div>
+
+            <div class="flex-slide">
+              <div class="separation-vertical2">
+                <div data-controller="geocoder" data-geocoder-api-key-value=<%= ENV['MAPBOX_API_KEY'] %>>
+                  <%= f.text_field :address,
+                    class: "form-control d-none",
+                    placeholder: "my current address",
+                    data: { geocoder_target: "address" } %>
+                </div>
+                <%= f.submit "go catch!", class: "btn-small" %>
+              </div>
 
 
-            <%= f.range_field :range, min: 0, max: 200, step: 1, class: "range-style"%>
-            <%= f.label :range, "range within max. 200 km", class: "btn-small" %>
-            <%= f.submit "go catch!", class: "btn-small" %>
+              <div class="separation-vertical">
+                <%= f.range_field :range, min: 0, max: 200, step: 1, class: "range-style"%>
+                <%= f.label :range, "range within max. 200 km", class: "btn-small" %>
+              </div>
+            </div>
 
+            <% end %>
           </div>
-          <% end %>
 
        </div>
     </div>
