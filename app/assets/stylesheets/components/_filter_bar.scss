@@ -1,7 +1,25 @@
 .filterbar {
   background: linear-gradient(to bottom, #f4f4f4e5, #f4f4f4);
-  height: 150px;
+  height: 125px;
+  position: fixed;
+}
+
+.filterbar-margin {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 90%;
+  margin: 15px auto;
+}
+
+.btn-small {
+  // border-radius: 150px;
+  border: none;
+  background: none;
+  font-weight: 400;
+  color: #868686;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  text-transform: lowercase;
+  margin: o auto;
 }
