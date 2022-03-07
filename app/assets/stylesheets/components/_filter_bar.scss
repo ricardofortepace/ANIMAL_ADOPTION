@@ -12,15 +12,16 @@
   width: 89%;
   margin: 0 auto;
   height: 100%;
+  justify-content: space-between;
 }
 
 .field-pet {
-  width: 50%;
+  width: 45%;
 }
 
 .separation {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .btn-small,
@@ -33,7 +34,12 @@ label {
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
   text-transform: lowercase;
-  margin: o auto;
+  margin: 5px auto 0;
+}
+
+.btn-small:hover,
+label:hover {
+  color: #8054ff;
 }
 
 .btn-small-with-border {
