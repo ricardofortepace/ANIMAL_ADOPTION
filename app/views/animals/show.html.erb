@@ -1,7 +1,7 @@
   <div class="cont-card">
 
     <div class="card-img">
-      <% @animal.photos.find(0) do |photo| %>
+      <% @animal.photos&.first do |photo| %>
         <%= cl_image_tag photo.key, height: 540, width: 540, crop: :fill %>
       <% end %>
     </div>
