@@ -32,9 +32,12 @@
               <%= f.submit "this a good boy?", class: "btn-small" %>
         </div>
 
-        <%= f.text_field :address,
-           class: "form-control",
-           placeholder: "my current address"%>
+        <div data-controller="geocoder" data-geocoder-api-key-value=<%= ENV['MAPBOX_API_KEY'] %>>
+          <%= f.text_field :address,
+            class: "form-control d-none",
+            placeholder: "my current address",
+            data: { geocoder_target: "address" } %>
+        </div>
 
         <%= f.check_box :user_address, class: "form-check-input" %>
         <%= f.label :user_address, 'my homeplace 🏠' %>
