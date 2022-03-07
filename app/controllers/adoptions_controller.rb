@@ -3,6 +3,7 @@ class AdoptionsController < ApplicationController
     @animal = Animal.find(params[:animal_id])
     @adoption = Adoption.new
     @adoption.animal = @animal
+    authorize @adoption
   end
 
   def create
@@ -10,6 +11,7 @@ class AdoptionsController < ApplicationController
     @adoption = Adoption.new
     @adoption.animal = @animal
     @adoption.user = current_user
+    authorize @adoption
 
     if @adoption.save
       redirect_to adoption_path(@adoption)
@@ -20,5 +22,6 @@ class AdoptionsController < ApplicationController
 
   def show
     @adoption = Adoption.find(params[:id])
+    authorize @adoption
   end
 end
