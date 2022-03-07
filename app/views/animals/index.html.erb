@@ -33,12 +33,6 @@
             </div>
           </div>
 
-          <div class="field-pet">
-            <%= f.text_field :address,
-              class: "form-control",
-              placeholder: "my current address"%>
-
-
         <div data-controller="geocoder" data-geocoder-api-key-value=<%= ENV['MAPBOX_API_KEY'] %>>
           <%= f.text_field :address,
             class: "form-control d-none",
