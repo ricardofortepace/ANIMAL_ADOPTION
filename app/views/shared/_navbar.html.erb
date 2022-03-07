@@ -23,9 +23,9 @@
               <%end%>
 
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "adopt a new pet", animals_path, class: "dropdown-item" %>
-                <%= link_to "add a pet for adoption", new_animal_path, class: "dropdown-item" %>
-                <%= link_to "edit details", edit_user_registration_path, class: "dropdown-item" %>
+                <%= link_to "adopt a pet", animals_path, class: "dropdown-item" %>
+                <%= link_to "add a new pet for adoption", new_animal_path, class: "dropdown-item" %>
+                <%= link_to "edit user details", edit_user_registration_path, class: "dropdown-item" %>
                 <%= link_to "log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
               </div>
 

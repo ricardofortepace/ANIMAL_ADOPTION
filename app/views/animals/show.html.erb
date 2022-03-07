@@ -26,14 +26,13 @@
       <p class="info"><%= @animal.description %></p>
     </div>
     <div class="botoes">
-      <%= link_to 'edit', animals_path, class:"button-go-destroy" %>
+      <% if policy(@animal).edit? %>
+        <%= link_to 'edit', edit_animal_path, class:"button-go-edit" %>
+        <%= link_to 'delete', animals_path(@animal), method: 'DELETE', class:"button-go-destroy", data: { confirm: "are you sure?" } %>
+      <% end %>
       <%= link_to 'share', animals_path, class:"button-go-share" %>
       <%= link_to 'back', animals_path, class:"button-go-back" %>
 
-      <% if policy(@animal).edit? %>
-        <%= link_to 'edit', edit_animal_path, class:"" %>
-        <%= link_to 'delete', animals_path(@animal), method: 'DELETE', class:"", data: { confirm: "are you sure?" } %>
-      <% end %>
 
       <%= simple_form_for [@animal, @adoption] do |f| %>
         <%= f.button :submit, "take me home! 🐶😺", class: "button-go-take" %>
