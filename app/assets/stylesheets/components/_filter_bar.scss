@@ -61,7 +61,20 @@ label {
   // margin: 5px auto 0;
 }
 
+.btn-small-2 {
+  // border-radius: 150px;
+  border: none;
+  background: none;
+  font-weight: 400;
+  color: #868686;
+  font-family: "Readex Pro", sans-serif;
+  text-transform: lowercase;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
 .btn-small:hover,
+.btn-small-2:hover,
 label:hover {
   color: #8054ff;
 }
