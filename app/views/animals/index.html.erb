@@ -70,7 +70,7 @@
       <% @animals.each do |animal| %>
         <%= link_to animal do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= animal.photos.attached? ? cl_image_path(animal.photos.first.key) : 'https://img.freepik.com/free-vector/adopt-pet-concept_23-2148523582.jpg' %>)">
-          <p class= "detail">genre: <span class="detail-plus"><%= animal.genre%></span> | <span class="detail-plus">age: <%= animal.age%></p></span>
+          <p class= "detail">gender: <span class="detail-plus"><%= animal.genre%></span> | <span class="detail-plus">age: <%= animal.age%></p></span>
         </div>
         <% end %>
       <% end %>
