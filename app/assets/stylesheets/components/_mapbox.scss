@@ -18,7 +18,7 @@
 
 .mapboxgl-ctrl-geocoder--input {
   font: inherit;
-  width: 100%;
+  // width: 103%;
   background-color: transparent;
   margin: 0;
   height: 43px;
@@ -33,12 +33,28 @@
   display: inline-block;
 }
 
-.mapboxgl-ctrl-geocoder {
+.mapboxgl-ctrl-geocoder,
+.mapboxgl-ctrl {
   background-color: transparent;
   box-shadow: none;
-  width: 100% !important;
+  // width: 100% !important;
 }
 
 .mapboxgl-ctrl-geocoder--button {
   background-color: transparent;
+}
+
+.user_address {
+  width: 100%;
+}
+
+.mapboxgl-ctrl-geocoder,
+.mapboxgl-ctrl {
+  width: 100%;
+}
+
+.mapboxgl-ctrl-geocoder--input {
+  width: 24vw;
+  max-width: 100%;
+  min-width: 24vw;
 }

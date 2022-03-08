@@ -51,8 +51,10 @@
 
 
               <div class="separation-vertical">
-                <%= f.range_field :range, collection:0..200, step: 10, class: "range-style"%>
-                <%= f.label :range, "max. range 200 km", class: "btn-small" %>
+              <div class="range-position">
+                  <%= f.range_field :range, collection:0..200, step: 10, class: "range-style"%>
+                  <%= f.label :range, "max. range 200 km", class: "btn-small" %>
+                </div>
               </div>
             </div>
 
