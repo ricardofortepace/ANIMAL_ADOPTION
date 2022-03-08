@@ -32,7 +32,7 @@
                                 input_html: { autocomplete: "name" }%>
                     <%= f.input :photo, :label => "photo (optional)", as: :file %>
                     <%= f.input :address, :label => "address (optional)",
-                                input_html: { data: { geocoder_target: "address" }, class: "d-none" },
+                                input_html: { data: { geocoder_target: "address" }, class: "d-none", id: "search-item" },
                                 wrapper_html: { data: { controller: "geocoder",
                                 geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
                   </div>
