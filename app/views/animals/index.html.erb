@@ -20,8 +20,8 @@
               <%= f.check_box :castrate, class: "form-check-input mt-1" %>
               <%= f.label :castrate, 'castrated', class: "mx-2" %>
 
-              <%= f.check_box :castrate, class: "form-check-input mt-1" %>
-              <%= f.label :castrate, 'uploaded by me', class: "mx-2" %>
+              <%= f.check_box :user_animal, class: "form-check-input mt-1" %>
+              <%= f.label :user_animal, 'uploaded by myself 👦', class: "mx-2" %>
             </div>
 
             <div class="separation">
@@ -47,7 +47,7 @@
                     placeholder: "my current address",
                     data: { geocoder_target: "address" } %>
                 </div>
-                <%= f.submit "go catch!", class: "btn-small" %>
+                <%= f.submit "not at home? go catch!", class: "btn-small" %>
               </div>
 
 
@@ -63,14 +63,6 @@
        </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
 
 <div class="container-animals">
   <div class="row">
