@@ -44,7 +44,6 @@
                 <div data-controller="geocoder" data-geocoder-api-key-value=<%= ENV['MAPBOX_API_KEY'] %>>
                   <%= f.text_field :address,
                     class: "form-control d-none",
-                    placeholder: "my current address",
                     data: { geocoder_target: "address" } %>
                 </div>
                 <%= f.submit "not at home? go catch!", class: "btn-small" %>
@@ -52,8 +51,11 @@
 
 
               <div class="separation-vertical">
-                <%= f.range_field :range, min: 0, max: 200, step: 1, class: "range-style"%>
+                <%= f.range_field :range, collection:0..200, step: 10, class: "range-style"%>
                 <%= f.label :range, "range within max. 200 km", class: "btn-small" %>
+
+
+                <span id="range" style="color:red;font-weight:bold;"></span>
               </div>
             </div>
 
