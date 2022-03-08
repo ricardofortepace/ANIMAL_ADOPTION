@@ -11,13 +11,13 @@
 
                 <div class="container-sign-up">
                   <div class="col-5">
-                      <%= f.input :photos, as: :file, input_html: { multiple: true }, input_html: { class: 'first' } %>
+                    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
                     <%= f.input :specie, collection: ["cat", "dog"] %>
-                    <%= f.input :genre, collection: ["female", "male"] %>
+                    <%= f.input :genre, :label => "gender", collection: ["female", "male"] %>
                     <%= f.input :breed %>
                   </div>
                   <div class=" ajuste1 col-5 d-flex flex-column justify-content-between">
-                    <%= f.input :age %>
+                    <%= f.input :age, as: :integer, input_html: { min: '0', max: '300', step: '1' }, :label => "age (in months)" %>
                     <%= f.input :castrate %>
                     <%= f.input :description, as: :text %>
                     <%= f.input :address,

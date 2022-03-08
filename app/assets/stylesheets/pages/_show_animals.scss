@@ -33,6 +33,7 @@
 
 .animal-text3 {
   position: absolute;
+  width: 450px;
   top: 15px;
   left: 930px;
 }
@@ -68,7 +69,6 @@
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
   border: 3px solid #8054ff;
-  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
   right: 450px;
   bottom: 20px;
@@ -79,6 +79,7 @@
   background-color: #8054ff;
   color: #fff;
   border: 3px solid #8054ff;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
 }
 
 .button-go-destroy {
@@ -93,7 +94,6 @@
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
   border: 3px solid #8054ff;
-  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
   right: 300px;
   bottom: 20px;
@@ -104,6 +104,7 @@
   background-color: #8054ff;
   color: #fff;
   border: 3px solid #8054ff;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
 }
 
 .button-go-share {
@@ -118,7 +119,6 @@
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
   border: 3px solid #8054ff;
-  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
   right: 160px;
   bottom: 20px;
@@ -129,6 +129,7 @@
   background-color: #fff;
   color: #8054ff;
   border: 3px solid #8054ff;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
 }
 
 .button-go-back {
@@ -143,7 +144,6 @@
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
   border: 3px solid #ff5454;
-  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
   right: 25px;
   bottom: 20px;
@@ -154,6 +154,7 @@
   background-color: #fff;
   color: #ff5454;
   border: 3px solid #ff5454;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
 }
 
 .button-go-take {
@@ -168,7 +169,6 @@
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
   border: 3px solid #ff5454;
-  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
   position: absolute;
   right: 21px;
   bottom: 85px;
@@ -179,6 +179,7 @@
   background-color: #ff5454;
   color: #fff;
   border: 3px solid #ff5454;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.5);
 }
 
 .info {
@@ -195,4 +196,21 @@
   font-weight: 200;
   font-size: 24px;
   margin: 7px;
+}
+
+.carousel-control-next-icon {
+  background-color: transparent;
+  fill: #ff5454;
+  background-image: url("seta_d.png");
+}
+
+.carousel-control-prev-icon {
+  background-color: transparent;
+  fill: #ff5454;
+  background-image: url("seta_e.png");
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 0.9;
 }

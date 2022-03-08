@@ -22,6 +22,7 @@
 
 .thanks-text {
   // text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.75);
+  width: 90%;
   font-size: 2.8vw;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -29,7 +30,22 @@
   opacity: 0.8;
   color: #9b9b9b;
   font-style: normal;
-  margin: 5vh 0;
+  margin: 5vh auto;
+  background-color: #fff;
+  line-height: 1.5;
+  white-space: normal;
+}
+
+.caveat {
+  width: 70%;
+  font-size: 1vw;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  opacity: 0.8;
+  color: #111;
+  font-style: normal;
+  margin: 5vh auto;
   background-color: #fff;
   line-height: 1.5;
   white-space: normal;
@@ -37,10 +53,4 @@
 
 #destak {
   color: #111;
-}
-
-#pets {
-  font-size: 50px;
-  margin: 20px auto;
-  white-space: normal;
 }

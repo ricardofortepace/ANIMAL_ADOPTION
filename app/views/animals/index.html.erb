@@ -20,8 +20,8 @@
               <%= f.check_box :castrate, class: "form-check-input mt-1" %>
               <%= f.label :castrate, 'castrated', class: "mx-2" %>
 
-              <%= f.check_box :castrate, class: "form-check-input mt-1" %>
-              <%= f.label :castrate, 'uploaded by me', class: "mx-2" %>
+              <%= f.check_box :user_animal, class: "form-check-input mt-1" %>
+              <%= f.label :user_animal, 'uploaded by myself 👦', class: "mx-2" %>
             </div>
 
             <div class="separation">
@@ -47,7 +47,7 @@
                     placeholder: "my current address",
                     data: { geocoder_target: "address" } %>
                 </div>
-                <%= f.submit "go catch!", class: "btn-small" %>
+                <%= f.submit "not at home? go catch!", class: "btn-small" %>
               </div>
 
 
@@ -64,21 +64,13 @@
     </div>
   </div>
 
-
-
-
-
-
-
-
-
 <div class="container-animals">
   <div class="row">
     <div class="cards my-4">
       <% @animals.each do |animal| %>
         <%= link_to animal do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= animal.photos.attached? ? cl_image_path(animal.photos.first.key) : 'https://img.freepik.com/free-vector/adopt-pet-concept_23-2148523582.jpg' %>)">
-          <p class= "detail">genre: <span class="detail-plus"><%= animal.genre%></span> | <span class="detail-plus">age: <%= animal.age%></p></span>
+          <p class= "detail">gender: <span class="detail-plus"><%= animal.genre%></span> | <span class="detail-plus">age: <%= animal.age%></p></span>
         </div>
         <% end %>
       <% end %>
