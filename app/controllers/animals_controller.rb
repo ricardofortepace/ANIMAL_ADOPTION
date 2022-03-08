@@ -2,6 +2,9 @@ class AnimalsController < ApplicationController
   before_action :set_animal, only: %i[show edit update destroy]
   # GET /animals
   def index
+    params[:address] = current_user.address if params[:user_address] == "1"
+
+    raise
     @animals = Animal.all
     @animals = policy_scope(Animal)
 
@@ -12,6 +15,8 @@ class AnimalsController < ApplicationController
         lng: animal.longitude
       }
     end
+
+
   end
 
   # GET /animals/1
