@@ -28,7 +28,7 @@
               <%= f.text_field :query,
                   class: "form-control",
                   placeholder: "behavior, size, colour, and other qualities"%>
-                  <%= f.submit "this a good boy?", class: "btn-small" %>
+                  <%= f.submit "click to search!", class: "btn-small-2" %>
             </div>
           </div>
 
@@ -44,16 +44,15 @@
                 <div data-controller="geocoder" data-geocoder-api-key-value=<%= ENV['MAPBOX_API_KEY'] %>>
                   <%= f.text_field :address,
                     class: "form-control d-none",
-                    placeholder: "my current address",
                     data: { geocoder_target: "address" } %>
                 </div>
-                <%= f.submit "not at home? go catch!", class: "btn-small" %>
+                <%= f.submit "where are you?", class: "btn-small-2" %>
               </div>
 
 
               <div class="separation-vertical">
-                <%= f.range_field :range, min: 0, max: 200, step: 1, class: "range-style"%>
-                <%= f.label :range, "range within max. 200 km", class: "btn-small" %>
+                <%= f.range_field :range, collection:0..200, step: 10, class: "range-style"%>
+                <%= f.label :range, "max. range 200 km", class: "btn-small" %>
               </div>
             </div>
 
