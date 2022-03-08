@@ -12,7 +12,7 @@
               <div class="col-5">
                   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
                   <%= f.input :specie, collection: ["cat", "dog"]  %>
-                  <%= f.input :genre, , :label => "gender", collection: ["female", "male"] %>
+                  <%= f.input :genre, :label => "gender", collection: ["female", "male"] %>
                   <%= f.input :breed %>
                 </div>
                 <div class="ajuste1 col-5 d-flex flex-column justify-content-between">
