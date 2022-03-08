@@ -26,13 +26,14 @@
     <%elsif @animal.photos.length == 1%>
       <%= cl_image_tag @animal.photos.first.key, height: 540, width: 540, crop: :fill%>
     <%else%>
-      <img src="https://img.freepik.com/free-vector/adopt-pet-concept_23-2148523582.jpg", alt="Sem foto ainda">
+      <img src="https://img.freepik.com/free-vector/adopt-pet-concept_23-2148523582.jpg", alt="Sem foto ainda" height= "540", width= "540">
     <%end%>
   </div>
 
   <div class="animal-text1">
     <p class="titulo"><strong>specie</strong></p>
     <p class="info"><%= @animal.specie %></p>
+
     <p class="titulo"><strong>breed</strong></p>
     <p class="info"><%= @animal.breed %></p>
   </div>
@@ -40,13 +41,17 @@
   <div class="animal-text2">
     <p class="titulo"><strong>gender</strong></p>
     <p class="info"><%= @animal.genre %></p>
+
     <p class="titulo"><strong>age</strong></p>
     <p class="info"><%= @animal.age %> years</p>
   </div>
 
   <div class="animal-text3">
-    <p class="titulo"><strong>castrated</strong></p>
+  <p class="titulo"><strong>castrated</strong></p>
     <p class="info"><%= @animal.castrate %></p>
+
+    <p class="titulo"><strong>address</strong></p>
+    <p class="info"><%= @animal.address %></p>
   </div>
 
   <div class="animal-text4">
