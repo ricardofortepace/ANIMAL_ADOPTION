@@ -200,8 +200,17 @@
 
 .carousel-control-next-icon {
   background-color: transparent;
+  fill: #ff5454;
+  background-image: url("seta_d.png");
 }
 
 .carousel-control-prev-icon {
   background-color: transparent;
+  fill: #ff5454;
+  background-image: url("seta_e.png");
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 0.9;
 }
