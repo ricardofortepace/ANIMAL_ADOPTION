@@ -3,46 +3,36 @@ class AnimalsController < ApplicationController
   # GET /animals
   def index
     @animals = policy_scope(Animal)
+    # parametro para pesquisar animais proximos do endereco
+    params[:address] = current_user.address if params[:user_address] == "1"
 
-    #raise
-    # # parametro para pesquisar na descricao
-    if params[:query].present?
+
+    # parametro para pesquisar na descricao
+    if params[:specie_dog] == "1" && params[:query].present?
+      @animals = Animal.where("specie = ? and description @@ ?", "dog", params[:query])
+    elsif params[:specie_cat] == "1" && params[:query].present?
+      @animals = Animal.where("specie = ? and description @@ ?", "cat", params[:query])
+    elsif params[:specie_dog] == "1" && params[:specie_cat] == "0"
+      @animals = Animal.where("specie = ?", "dog")
+    elsif params[:specie_cat] == "1" && params[:specie_dog] == "0"
+      @animals = Animal.where("specie = ?", "cat")
+    elsif params[:query].present?
       @animals = Animal.search_by_description(params[:query])
+    elsif params[:uploaded] == "1"
+      @animals = Animal.where(user_id: current_user.id)
+    elsif params[:address].present?
+      @animals = Animal.near(params[:address], params[:range])
     else
       @animals = Animal.all
     end
 
-    # # parametro para pesquisar na descricao
-    # if params[:specie_dog] == "1"
-    #   @animals = Animal.where(specie: "dog")
-    # elsif params[:specie_cat] == "1"
-    #   @animals = Animal.where(specie: "cat")
-    # else
-    #   @animals = Animal.all
-    # end
-    # parametro para pesquisar animais uploaded by user
-    #@animals = Animal.find_by(user_id: :current_user) if params[:uploaded] == "1"
-
-    # parametro para pesquisar animais proximos do endereco
-   # params[:address] = current_user.address if params[:user_address] == "1"
-
-    # if params[:address].present?
-    #   @animals = Animal.near(params[:address], params[:range])
-    # else
-    #   @animals = Animal.all
-    # end
-
-
-
-    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
     @markers = @animals.geocoded.map do |animal|
       {
         lat: animal.latitude,
         lng: animal.longitude
       }
     end
-
-
+    # raise
   end
 
   # GET /animals/1
