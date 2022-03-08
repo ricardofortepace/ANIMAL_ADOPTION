@@ -2,16 +2,37 @@ class AnimalsController < ApplicationController
   before_action :set_animal, only: %i[show edit update destroy]
   # GET /animals
   def index
-    @animals = Animal.all
     @animals = policy_scope(Animal)
+    # parametro para pesquisar animais proximos do endereco
+    params[:address] = current_user.address if params[:user_address] == "1"
 
-    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+
+    # parametro para pesquisar na descricao
+    if params[:specie_dog] == "1" && params[:query].present?
+      @animals = Animal.where("specie = ? and description @@ ?", "dog", params[:query])
+    elsif params[:specie_cat] == "1" && params[:query].present?
+      @animals = Animal.where("specie = ? and description @@ ?", "cat", params[:query])
+    elsif params[:specie_dog] == "1" && params[:specie_cat] == "0"
+      @animals = Animal.where("specie = ?", "dog")
+    elsif params[:specie_cat] == "1" && params[:specie_dog] == "0"
+      @animals = Animal.where("specie = ?", "cat")
+    elsif params[:query].present?
+      @animals = Animal.search_by_description(params[:query])
+    elsif params[:uploaded] == "1"
+      @animals = Animal.where(user_id: current_user.id)
+    elsif params[:address].present?
+      @animals = Animal.near(params[:address], params[:range])
+    else
+      @animals = Animal.all
+    end
+
     @markers = @animals.geocoded.map do |animal|
       {
         lat: animal.latitude,
         lng: animal.longitude
       }
     end
+    # raise
   end
 
   # GET /animals/1

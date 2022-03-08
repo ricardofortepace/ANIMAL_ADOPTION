@@ -28,6 +28,7 @@ gem 'pundit' # user authorization
 gem 'devise'
 gem 'faker'
 gem "geocoder"
+gem 'pg_search', '~> 2.3.0'
 
 gem 'cloudinary', '~> 1.16.0'
 # Use Active Storage variant

@@ -20,12 +20,12 @@
               <%= f.check_box :castrate, class: "form-check-input mt-1" %>
               <%= f.label :castrate, 'castrated', class: "mx-2" %>
 
-              <%= f.check_box :user_animal, class: "form-check-input mt-1" %>
-              <%= f.label :user_animal, 'uploaded by myself 👦', class: "mx-2" %>
+              <%= f.check_box :uploaded, class: "form-check-input mt-1" %>
+              <%= f.label :uploaded, 'uploaded by myself 👦', class: "mx-2" %>
             </div>
 
             <div class="separation">
-              <%= f.text_field :description,
+              <%= f.text_field :query,
                   class: "form-control",
                   placeholder: "behavior, size, colour, and other qualities"%>
                   <%= f.submit "click to search!", class: "btn-small-2" %>
